@@ -9,7 +9,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18
-          
+
     # Speed up subsequent runs with caching
     - name: Cache node modules
       uses: actions/cache@v3
@@ -25,7 +25,7 @@ jobs:
           ${{ runner.os }}-
       # Install required deps for action
       - name: Install Dependencies
-      run: npm install
+        run: npm install
       # Finally, run our tests
       - name: Run the tests
-      run: npm test 9
+        run: npm test 9
