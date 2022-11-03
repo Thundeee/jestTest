@@ -28,4 +28,4 @@ jobs:
         run: npm install
       # Finally, run our tests
       - name: Run the tests
-        run: npm test 9
+        run: npm test 
