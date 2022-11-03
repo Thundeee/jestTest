@@ -9,9 +9,6 @@ steps:
 uses: actions/setup-node@v3
 with:
 node-version: 18
-
-# Speed up subsequent runs with caching
-
 - name: Cache node modules
 uses: actions/cache@v3
 env:
