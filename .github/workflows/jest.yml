@@ -1,14 +1,15 @@
 name: Jest
 on: push
 jobs:
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: Setup Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: 16
+test:
+runs-on: ubuntu-latest
+steps:
+- uses: actions/checkout@v3
+- name: Setup Node.js
+uses: actions/setup-node@v3
+with:
+node-version: 18
+# Speed up subsequent runs with caching
 - name: Cache node modules
 uses: actions/cache@v3
 env:
@@ -26,4 +27,3 @@ ${{ runner.os }}-
 run: npm install
 # Finally, run our tests
 - name: Run the tests
-run: npm test 
