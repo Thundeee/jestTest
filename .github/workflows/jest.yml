@@ -27,3 +27,4 @@ ${{ runner.os }}-
 run: npm install
 # Finally, run our tests
 - name: Run the tests
+run: npm test 9
